@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FB3F0596216CA41200ABF839 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F0595216CA41200ABF839 /* main.swift */; };
+		FB3F059D216CEFE300ABF839 /* LocationEstimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F059C216CEFE300ABF839 /* LocationEstimator.swift */; };
+		FB3F05A0216CF04D00ABF839 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F059F216CF04D00ABF839 /* Arguments.swift */; };
+		FB3F05A2216CF07F00ABF839 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F05A1216CF07F00ABF839 /* Location.swift */; };
+		FB3F05A4216CF09F00ABF839 /* LocationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		FB3F0592216CA41200ABF839 /* location-estimator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "location-estimator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3F0595216CA41200ABF839 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FB3F059C216CEFE300ABF839 /* LocationEstimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEstimator.swift; sourceTree = "<group>"; };
+		FB3F059F216CF04D00ABF839 /* Arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
+		FB3F05A1216CF07F00ABF839 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,21 @@
 		FB3F0594216CA41200ABF839 /* location-estimator */ = {
 			isa = PBXGroup;
 			children = (
+				FB3F059E216CF02D00ABF839 /* Utils */,
 				FB3F0595216CA41200ABF839 /* main.swift */,
+				FB3F059C216CEFE300ABF839 /* LocationEstimator.swift */,
 			);
 			path = "location-estimator";
+			sourceTree = "<group>";
+		};
+		FB3F059E216CF02D00ABF839 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FB3F059F216CF04D00ABF839 /* Arguments.swift */,
+				FB3F05A1216CF07F00ABF839 /* Location.swift */,
+				FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3F05A0216CF04D00ABF839 /* Arguments.swift in Sources */,
 				FB3F0596216CA41200ABF839 /* main.swift in Sources */,
+				FB3F05A4216CF09F00ABF839 /* LocationLoader.swift in Sources */,
+				FB3F05A2216CF07F00ABF839 /* Location.swift in Sources */,
+				FB3F059D216CEFE300ABF839 /* LocationEstimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
