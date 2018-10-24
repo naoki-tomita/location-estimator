@@ -8,18 +8,21 @@
 
 import Foundation;
 
-let args = parseArgs();
-initFormatter(timeZone: args.zone);
+let args = try! parseArgs();
+print(args)
+initFormatter();
 
 let locations = loadLocations(path: args.locationsPath);
 let photo = Photo(path: args.photoPath);
 
 let found = findNearestLocation(
   fromLocations: locations,
-  atIntervalSince1970: photo.dateTimeOriginalFrom1970
+  atIntervalSince1970: photo.dateTimeOriginalFrom1970 - TimeInterval(args.zone.secondsFromGMT())
 );
 
 photo.latitude = found.latitude;
-photo.longitude = found.longitude;
+photo.longitude = -found.longitude;
+
+print(found)
 
 photo.save();

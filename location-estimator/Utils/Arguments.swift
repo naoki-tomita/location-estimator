@@ -41,7 +41,7 @@ private func toDate(from: TimeInterval) -> Date {
 //  return Arguments(locationsPath: locationPath, time: time);
 //}
 
-func parseArgs() -> (locationsPath: String, photoPath: String, zone: TimeZone) {
+func parseArgs() throws -> (locationsPath: String, photoPath: String, zone: TimeZone) {
   let parser = ArgumentParser(args: [
     ArgumentType(key: "src", shortKey: "s"),
     ArgumentType(key: "photo", shortKey: "p"),
@@ -50,10 +50,14 @@ func parseArgs() -> (locationsPath: String, photoPath: String, zone: TimeZone) {
   let parsed = parser.parse();
 
   // parse csv path.
-  let locationsPath: String = parsed["src"]!;
+  guard let locationsPath: String = parsed["src"] else {
+    throw NSError(domain: "Argument 'src' not found.", code: -1, userInfo: nil);
+  };
 
   // parse specified time.
-  let photoPath: String = parsed["photo"]!;
+  guard let photoPath: String = parsed["photo"]  else {
+    throw NSError(domain: "Argument 'photo' not found.", code: -1, userInfo: nil);
+  };
 
   // parse timezone.
   let hourFromGMT: Int? = Int(parsed["zone"] ?? "");

@@ -11,8 +11,7 @@ import CoreImage;
 
 let formatter = DateFormatter();
 
-func initFormatter(timeZone: TimeZone) {
-  formatter.timeZone = timeZone;
+func initFormatter() {
   formatter.locale = Locale(identifier: "en_US_POSIX");
   formatter.dateFormat = "yyyy:MM:dd HH:mm:ss"; // HH means 24 hour format.
 }
@@ -23,6 +22,7 @@ class Photo {
       let properties = image.properties;
       let exif = properties[kCGImagePropertyExifDictionary as String] as! [String: Any];
       let dateTimeOriginal: String = exif[kCGImagePropertyExifDateTimeOriginal as String] as! String;
+      print(formatter.date(from: dateTimeOriginal)!.timeIntervalSince1970);
       return formatter.date(from: dateTimeOriginal)!.timeIntervalSince1970;
     }
   };
@@ -32,7 +32,13 @@ class Photo {
       return gps[kCGImagePropertyGPSLatitude as String] as! Double? ?? 0.0;
     }
     set(x) {
-      gps[kCGImagePropertyGPSLatitude as String] = x;
+      if x < 0 {
+        gps[kCGImagePropertyGPSLatitudeRef as String] = "S";
+        gps[kCGImagePropertyGPSLatitude as String] = -x;
+      } else {
+        gps[kCGImagePropertyGPSLatitudeRef as String] = "N";
+        gps[kCGImagePropertyGPSLatitude as String] = x;
+      }
     }
   }
   var longitude: Double {
@@ -40,7 +46,13 @@ class Photo {
       return gps[kCGImagePropertyGPSLongitude as String] as! Double? ?? 0.0;
     }
     set(x) {
-      gps[kCGImagePropertyGPSLongitude as String] = x;
+      if x < 0 {
+        gps[kCGImagePropertyGPSLongitudeRef as String] = "E";
+        gps[kCGImagePropertyGPSLongitude as String] = -x;
+      } else {
+        gps[kCGImagePropertyGPSLongitudeRef as String] = "W";
+        gps[kCGImagePropertyGPSLongitude as String] = x;
+      }
     }
   }
   let image: CIImage;
