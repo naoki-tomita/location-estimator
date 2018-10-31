@@ -13,6 +13,8 @@
 		FB3F05A2216CF07F00ABF839 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F05A1216CF07F00ABF839 /* Location.swift */; };
 		FB3F05A4216CF09F00ABF839 /* LocationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */; };
 		FB7AF07921800F5600DD826D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AF07821800F5600DD826D /* Photo.swift */; };
+		FBB0553C21887AE700758B84 /* Exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0553B21887AE700758B84 /* Exif.swift */; };
+		FBB0553E218943D600758B84 /* ExifToolWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0553D218943D600758B84 /* ExifToolWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		FB3F05A1216CF07F00ABF839 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLoader.swift; sourceTree = "<group>"; };
 		FB7AF07821800F5600DD826D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FBB0553B21887AE700758B84 /* Exif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exif.swift; sourceTree = "<group>"; };
+		FBB0553D218943D600758B84 /* ExifToolWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifToolWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				FB3F05A1216CF07F00ABF839 /* Location.swift */,
 				FB3F05A3216CF09F00ABF839 /* LocationLoader.swift */,
 				FB7AF07821800F5600DD826D /* Photo.swift */,
+				FBB0553B21887AE700758B84 /* Exif.swift */,
+				FBB0553D218943D600758B84 /* ExifToolWrapper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,7 +151,9 @@
 				FB3F05A0216CF04D00ABF839 /* Arguments.swift in Sources */,
 				FB7AF07921800F5600DD826D /* Photo.swift in Sources */,
 				FB3F0596216CA41200ABF839 /* main.swift in Sources */,
+				FBB0553E218943D600758B84 /* ExifToolWrapper.swift in Sources */,
 				FB3F05A4216CF09F00ABF839 /* LocationLoader.swift in Sources */,
+				FBB0553C21887AE700758B84 /* Exif.swift in Sources */,
 				FB3F05A2216CF07F00ABF839 /* Location.swift in Sources */,
 				FB3F059D216CEFE300ABF839 /* LocationEstimator.swift in Sources */,
 			);

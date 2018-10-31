@@ -9,7 +9,6 @@
 import Foundation;
 
 let args = try! parseArgs();
-print(args)
 initFormatter();
 
 let locations = loadLocations(path: args.locationsPath);
@@ -21,8 +20,7 @@ let found = findNearestLocation(
 );
 
 photo.latitude = found.latitude;
-photo.longitude = -found.longitude;
-
-print(found)
-
+photo.longitude = found.longitude;
+print(photo.latitude, photo.longitude)
 photo.save();
+

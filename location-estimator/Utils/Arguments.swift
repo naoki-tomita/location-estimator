@@ -84,12 +84,11 @@ class ArgumentParser {
     var counter = 1;
     var dict: [String: String] = [:];
     while counter < CommandLine.argc {
-      print(CommandLine.arguments[counter]);
       for arg in args {
-        if
+        if (
           CommandLine.arguments[counter] == "--\(arg.key)" ||
           (arg.shortKey != nil && CommandLine.arguments[counter] == "-\(arg.shortKey!)")
-        {
+        ) {
           counter += 1;
           dict[arg.key] = CommandLine.arguments[counter];
         }
