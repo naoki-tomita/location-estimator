@@ -27,6 +27,6 @@ func runExifTool(latitude lat: Double, longitude long: Double, filePath: String)
   }
   let task = Process.launchedProcess(
     launchPath: "/bin/sh",
-    arguments: ["-c", "\"exiftool -GPSLatitude=\(latitude) -GPSLatitudeRef=\(latitudeRef) -GPSLongitude=\(longitude) -GPSLongitudeRef=\(longitudeRef) \(filePath)\""]);
+    arguments: ["-c", "exiftool -GPSLatitude=\(latitude) -GPSLatitudeRef=\(latitudeRef) -GPSLongitude=\(longitude) -GPSLongitudeRef=\(longitudeRef) \(filePath)"]);
   task.waitUntilExit();
 }

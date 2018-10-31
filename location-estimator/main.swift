@@ -9,18 +9,26 @@
 import Foundation;
 
 let args = try! parseArgs();
+print(args);
 initFormatter();
 
 let locations = loadLocations(path: args.locationsPath);
-let photo = Photo(path: args.photoPath);
+let items = try! FileManager.default.contentsOfDirectory(atPath: args.photoPath);
+for item in items {
+  guard item.hasSuffix(".jpg") || item.hasSuffix(".JPG") else {
+    continue;
+  }
+  let filePath = args.photoPath.appendingPathComponent(item);
+  let photo = Photo(path: filePath);
+  print(item)
+  let found = findNearestLocation(
+    fromLocations: locations,
+    atIntervalSince1970: photo.dateTimeOriginalFrom1970 - TimeInterval(args.zone.secondsFromGMT())
+  );
 
-let found = findNearestLocation(
-  fromLocations: locations,
-  atIntervalSince1970: photo.dateTimeOriginalFrom1970 - TimeInterval(args.zone.secondsFromGMT())
-);
-
-photo.latitude = found.latitude;
-photo.longitude = found.longitude;
-print(photo.latitude, photo.longitude)
-photo.save();
-
+  runExifTool(
+    latitude: found.latitude,
+    longitude: found.longitude,
+    filePath: filePath
+  );
+}

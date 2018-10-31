@@ -13,14 +13,16 @@ func findNearestLocation(
   atIntervalSince1970 interval: TimeInterval
 ) -> Location {
   var found: Location = locations[0];
-  var curAbs: TimeInterval = Date().timeIntervalSince1970;
+  var curAbs: Int = Int(Date().timeIntervalSince1970);
+  print(interval);
 
   for location in locations {
-    let tmpAbs = abs(location.createdAt - interval);
+    let tmpAbs = abs(Int(location.createdAt) - Int(interval));
     if tmpAbs < curAbs {
       curAbs = tmpAbs;
       found = location;
     }
   }
+  print(found, abs(Int(found.createdAt) - Int(interval)));
   return found;
 }

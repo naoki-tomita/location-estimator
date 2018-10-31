@@ -15,6 +15,7 @@
 		FB7AF07921800F5600DD826D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7AF07821800F5600DD826D /* Photo.swift */; };
 		FBB0553C21887AE700758B84 /* Exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0553B21887AE700758B84 /* Exif.swift */; };
 		FBB0553E218943D600758B84 /* ExifToolWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0553D218943D600758B84 /* ExifToolWrapper.swift */; };
+		FBB0554021894FB700758B84 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB0553F21894FB700758B84 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		FB7AF07821800F5600DD826D /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		FBB0553B21887AE700758B84 /* Exif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exif.swift; sourceTree = "<group>"; };
 		FBB0553D218943D600758B84 /* ExifToolWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifToolWrapper.swift; sourceTree = "<group>"; };
+		FBB0553F21894FB700758B84 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				FB7AF07821800F5600DD826D /* Photo.swift */,
 				FBB0553B21887AE700758B84 /* Exif.swift */,
 				FBB0553D218943D600758B84 /* ExifToolWrapper.swift */,
+				FBB0553F21894FB700758B84 /* String.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				FB3F05A0216CF04D00ABF839 /* Arguments.swift in Sources */,
 				FB7AF07921800F5600DD826D /* Photo.swift in Sources */,
 				FB3F0596216CA41200ABF839 /* main.swift in Sources */,
+				FBB0554021894FB700758B84 /* String.swift in Sources */,
 				FBB0553E218943D600758B84 /* ExifToolWrapper.swift in Sources */,
 				FB3F05A4216CF09F00ABF839 /* LocationLoader.swift in Sources */,
 				FBB0553C21887AE700758B84 /* Exif.swift in Sources */,
